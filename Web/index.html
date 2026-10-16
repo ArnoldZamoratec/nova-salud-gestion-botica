@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Nova Salud</title>
+  <meta property="og:type" content="website">
+
+  <meta property="og:title" content="Nova Salud | Botica">
+  <meta property="og:description" content="Sistema web de la botica Nova Salud: compra medicamentos y productos de salud de forma fácil y segura.">
+  <meta property="og:image" content="/og-image.webp">
+  <link rel="icon" type="image/svg+xml" href="/icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://abd0selim.alwaysdata.net" crossorigin />
+  <link 
+    rel="preload" 
+    as="style" 
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Pacifico&display=swap" 
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Pacifico&display=swap" 
+    media="print" 
+    onload="this.media='all'" 
+  />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Pacifico&display=swap" />
+  </noscript>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </body>
+</html>
